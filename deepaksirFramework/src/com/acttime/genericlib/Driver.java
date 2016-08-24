@@ -7,6 +7,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Driver {
 
+	 //this is a keyword
 	public static WebDriver driver;
 
 	public static WebDriver getBrowser(){
@@ -22,5 +23,6 @@ public class Driver {
 			driver = new FirefoxDriver();
 		}
 		 return driver;
+		
 	}
 }
