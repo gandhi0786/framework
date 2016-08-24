@@ -3,11 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="listn.A">
+      <class name="com.acttime.usertest.Usertest">
         <methods>
-          <include name="create"/>
+          <include name="configbeforeclass"/>
+          <include name="configAfterMtd"/>
+          <include name="configbeforemethod"/>
+          <include name="createnewuser1"/>
         </methods>
-      </class> <!-- listn.A -->
+      </class> <!-- com.acttime.usertest.Usertest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -19,6 +19,9 @@ public class EntertimeTrack extends WebDriverCommonLib{
 	@FindBy(xpath="//div[text()='USERS']")
 	WebElement user;
 	
+	
+	@FindBy(xpath="//span[text()='User']")
+	WebElement userbtn;
 	public void navigatetotaskpage()
 	{
 		task.click();
@@ -34,6 +37,11 @@ public class EntertimeTrack extends WebDriverCommonLib{
                  user.click();
 		
 		waitForPageToLoad();
+	}
+	
+	public void clickonuserbutton()
+	{
+		userbtn.click();
 	}
 	
 

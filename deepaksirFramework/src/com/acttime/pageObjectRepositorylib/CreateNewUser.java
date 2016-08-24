@@ -1,5 +1,6 @@
 package com.acttime.pageObjectRepositorylib;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -20,9 +21,13 @@ public class CreateNewUser extends WebDriverCommonLib {
 	
 	@FindBy(name="email")
 	private WebElement emailEdt;
+	
+	
+	
+	//input[@placeholder="Username"]
 
-	@FindBy(name="passwordText")
-	private WebElement passwordEdt;
+//	@FindBy(By.xpath("//input[@placeholder="Password"]"))
+//	private WebElement passwordEdt;
 	
 	@FindBy(name="passwordTextRetype")
 	private WebElement rePasswordEdt;
@@ -30,13 +35,17 @@ public class CreateNewUser extends WebDriverCommonLib {
    @FindBy(xpath="//input[contains(@value,'Create')]")
    private WebElement createUserBtn;
    
+   
+//   @FindBy(xpath="//span[text()='Create User']")
+//   private WebElement createuserbtn;
+   
    public void createUser(String userN, String fName, String lName
 		                 , String email, String userPassword){
 	   userNameEdt.sendKeys(userN);
 	   this.fName.sendKeys(fName);
 	   this.lName.sendKeys(lName);
 	   emailEdt.sendKeys(email);
-	   passwordEdt.sendKeys(userPassword);
+	   //passwordEdt.sendKeys(userPassword);
 	   rePasswordEdt.sendKeys(userPassword);
 	   createUserBtn.click();
 	   waitForPageToLoad();

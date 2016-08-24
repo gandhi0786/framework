@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="listner.sample"/>
-  </listeners>
   <test name="Test(failed)">
     <classes>
-      <class name="listn.A">
+      <class name="com.acttime.usertest.Usertest">
         <methods>
-          <include name="create"/>
+          <include name="configbeforeclass"/>
+          <include name="configAfterMtd"/>
+          <include name="configbeforemethod"/>
+          <include name="createnewuser1"/>
         </methods>
-      </class> <!-- listn.A -->
+      </class> <!-- com.acttime.usertest.Usertest -->
+      <class name="com.acttime.projectandcustomertest.ProjectandCustomerTest">
+        <methods>
+          <include name="createCustomerTest"/>
+        </methods>
+      </class> <!-- com.acttime.projectandcustomertest.ProjectandCustomerTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
